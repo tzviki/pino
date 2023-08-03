@@ -437,6 +437,7 @@ test('stdout in worker', async ({ not }) => {
     actual += chunk
   }
   await once(child, 'close')
+  await immediate()
   not(strip(actual).match(/Hello/), null)
 })
 
@@ -462,7 +463,6 @@ test('log and exit before ready', async ({ not }) => {
     cb()
   }))
   await once(child, 'close')
-  await immediate()
   not(strip(actual).match(/Hello/), null)
 })
 
