@@ -1,5 +1,5 @@
 'use strict'
-/* eslint no-prototype-builtins: 0v */
+/* eslint no-prototype-builtins: 0 */
 const os = require('os')
 const stdSerializers = require('pino-std-serializers')
 const caller = require('./lib/caller')
@@ -157,6 +157,7 @@ function pino (...args) {
   assertDefaultLevelFound(level, customLevels, useOnlyCustomLevels)
   const levels = mappings(customLevels, useOnlyCustomLevels)
 
+  // just a comment
   Object.assign(instance, {
     levels,
     [useOnlyCustomLevelsSym]: useOnlyCustomLevels,
