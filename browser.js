@@ -446,3 +446,5 @@ function pfGlobalThisOrFallback () {
   }
 }
 /* eslint-enable */
+
+// Enables default and name export with TypeScript and Babel
