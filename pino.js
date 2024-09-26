@@ -157,6 +157,7 @@ function pino (...args) {
   assertDefaultLevelFound(level, customLevels, useOnlyCustomLevels)
   const levels = mappings(customLevels, useOnlyCustomLevels)
 
+  // just a comment
   Object.assign(instance, {
     levels,
     [useOnlyCustomLevelsSym]: useOnlyCustomLevels,
